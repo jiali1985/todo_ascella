@@ -20,6 +20,12 @@ class TodoList extends React.PureComponent {
         }
     }
 
+    componentWillMount() {
+        this.setState({
+            item: null
+        });
+    }
+
 
     handleModalOpen = (item) => {
         this.setState({
