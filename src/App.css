@@ -61,6 +61,7 @@
   margin-top: -1px;
   position: relative;
   flex-wrap: wrap;
+  padding-bottom: 8px;
 }
 
 .todo-item-left {
@@ -83,7 +84,7 @@
 
 .todo-item-notes {
   flex: 1 100%;
-  font-size: 10px;
+  font-size: 12px;
   margin-left: 43px;
   font-style: italic;
   color: #8e8e8e;
