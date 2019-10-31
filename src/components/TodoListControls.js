@@ -34,6 +34,7 @@ class TodoControls extends React.PureComponent {
                 <TextField
                     value={this.state.inputName}
                     onChange={this.updateName}
+                    onKeyDown={(e) => { if (e.keyCode === 13) { this.handleAdd(e) } }}
                     style={{ marginRight: 10 }}
                 />
 
