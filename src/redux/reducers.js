@@ -2,13 +2,13 @@ const reducer = (state = [], action) => {
     switch (action.type) {
         case 'ADD_TODO':
             return [
-                ...state,
                 {
                     id: action.id,
                     name: action.item.name,
                     checked: false,
                     notes: ''
-                }
+                },
+                ...state
             ];
         case 'REMOVE_TODO':
             return state.filter(item => item.id !== action.item.id);
