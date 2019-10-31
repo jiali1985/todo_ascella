@@ -13,7 +13,7 @@ class App extends React.Component {
     render() {
         return (
             <BrowserRouter>
-                <div>
+                <div className="app-container">
                     <AppBar position="static">
                         <Toolbar>
                             <Typography variant="h6" >

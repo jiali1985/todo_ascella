@@ -20,7 +20,7 @@ class TodoList extends React.PureComponent {
         }
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.setState({
             item: null
         });

@@ -21,9 +21,15 @@
   color: #09d3ac;
 }
 
+#root {
+  background: #6d6d6d;
+  height: 100vh;
+}
+
 .todo-container {
   max-width: 600px;
   padding: 6px;
+  margin: 0 auto;
 }
 
 .controls-container {
@@ -104,4 +110,11 @@
 
 .active-page-link {    
   border-bottom: 3px solid #fff;
+}
+
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  min-height: 800px;
 }
