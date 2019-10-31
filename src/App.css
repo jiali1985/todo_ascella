@@ -23,7 +23,7 @@
 
 #root {
   background: #6d6d6d;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .todo-container {
