@@ -54,7 +54,9 @@ class TodoList extends React.PureComponent {
     }
 
     updateTodo = () => {
-        this.props.dispatch(updateTodo(this.state.item))
+        if (this.state.item.name !== '') {
+            this.props.dispatch(updateTodo(this.state.item))
+        }
         this.handleModalClose();
     }
 
