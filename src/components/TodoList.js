@@ -90,7 +90,7 @@ class TodoList extends React.PureComponent {
                         <Button onClick={this.handleModalClose} color="primary">
                             Cancel
                         </Button>
-                        <Button onClick={this.updateTodo} color="primary">
+                        <Button onClick={this.updateTodo} variant="contained" color="primary">
                             Save
                         </Button>
                     </DialogActions>
@@ -99,7 +99,7 @@ class TodoList extends React.PureComponent {
                     {todoList && todoList.map((item, index) => {
                         return <TodoItem handleModalOpen={this.handleModalOpen} key={index} item={item} />
                     })}
-                    {todoList.length === 0 && "Add something to do!"}
+                    {todoList.length === 0 && <div style={{ marginLeft: 10 }}>Add something to do!</div>}
                 </div>
             </React.Fragment>
         );

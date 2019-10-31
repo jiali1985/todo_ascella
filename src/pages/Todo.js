@@ -12,7 +12,7 @@ class Todo extends React.Component {
                     <span className="todo-header-name">Pending Tasks</span>
                     <TodoListControls />
                 </header>
-                <section>
+                <section className="list-container">
                     <TodoList />
                 </section>
             </div>
