@@ -13,7 +13,7 @@ const reducer = (state = [], action) => {
         case 'REMOVE_TODO':
             return state.filter(item => item.id !== action.item.id);
         case 'UPDATE_TODO':
-            return state.map(item => item.id === action.item.id ? { id: action.id, name: action.item.name, checked: action.item.checked, notes: action.item.notes } : item);
+            return state.map(item => item.id === action.item.id ? { id: action.item.id, name: action.item.name, checked: action.item.checked, notes: action.item.notes } : item);
         case 'TOGGLE_TODO':
             return state.map(item => item.id === action.item.id ? { ...item, checked: !item.checked } : item);
         default:
