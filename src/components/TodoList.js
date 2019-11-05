@@ -16,13 +16,13 @@ class TodoList extends React.PureComponent {
         super(props);
         this.state = {
             isModalOpen: false,
-            item: null
+            item: { name: '', title: '' }
         }
     }
 
     componentDidMount() {
         this.setState({
-            item: null
+            item: { name: '', title: '' }
         });
     }
 
@@ -54,10 +54,12 @@ class TodoList extends React.PureComponent {
     }
 
     updateTodo = () => {
-        if (this.state.item.name !== '') {
-            this.props.dispatch(updateTodo(this.state.item))
+        if (this.state.item.name) {
+            this.props.dispatch(updateTodo(this.state.item));
+            this.handleModalClose();
+        } else {
+            alert('Title is a required field.');
         }
-        this.handleModalClose();
     }
 
     render() {
@@ -74,6 +76,7 @@ class TodoList extends React.PureComponent {
                             autoFocus
                             margin="dense"
                             id="name"
+                            required
                             label="Title"
                             value={this.state.item.name}
                             onChange={e => this.updateTitle(e)}

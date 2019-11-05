@@ -1,6 +1,7 @@
 import React from 'react';
 import RemoveIcon from '@material-ui/icons/RemoveCircle';
 import EditIcon from '@material-ui/icons/Edit';
+import IconButton from '@material-ui/core/IconButton'
 import Checkbox from '@material-ui/core/Checkbox';
 import { connect } from 'react-redux';
 import { removeTodo, toggleTodo } from '../redux/actions';
@@ -31,8 +32,18 @@ class TodoItem extends React.PureComponent {
                     <span className={`todo-item-name ${item.checked ? "todo-item-completed" : ""}`}>{item.name}</span>
                 </div>
                 <div>
-                    <EditIcon role="button" aria-label={`Edit Item#${item.id}`} className="todo-icons" color="primary" onClick={() => this.props.handleModalOpen(item)} />
-                    <RemoveIcon role="button" aria-label={`Remove Item#${item.id}`} className="todo-icons" color="primary" onClick={(e) => this.removeItem(item.id, e)} />
+                    <IconButton
+                        aria-label={`Edit Item#${item.id}`}
+                        onClick={() => this.props.handleModalOpen(item)}
+                    >
+                        <EditIcon />
+                    </IconButton>
+                    <IconButton
+                        aria-label={`Remove Item#${item.id}`}
+                        onClick={(e) => this.removeItem(item.id, e)}
+                    >
+                        <RemoveIcon />
+                    </IconButton>
                 </div>
                 {item.notes && <div className="todo-item-notes">{item.notes}</div>}
             </div>

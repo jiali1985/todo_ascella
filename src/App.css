@@ -83,18 +83,15 @@
 }
 
 .todo-item-notes {
-  flex: 1 100%;
+  flex: 1 1 100%;
   font-size: 12px;
   margin-left: 43px;
   font-style: italic;
   color: #8e8e8e;
-  position: absolute;
   bottom: 0;
-}
-
-.todo-icons {
-  cursor: pointer;
-  margin-left: 10px;
+  word-break: break-word;
+  white-space: normal;
+  border-top: 1px solid #ccc;
 }
 
 .menu-links {
