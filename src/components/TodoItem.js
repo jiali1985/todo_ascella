@@ -36,13 +36,13 @@ class TodoItem extends React.PureComponent {
                         aria-label={`Edit Item#${item.id}`}
                         onClick={() => this.props.handleModalOpen(item)}
                     >
-                        <EditIcon />
+                        <EditIcon color="primary" />
                     </IconButton>
                     <IconButton
                         aria-label={`Remove Item#${item.id}`}
                         onClick={(e) => this.removeItem(item.id, e)}
                     >
-                        <RemoveIcon />
+                        <RemoveIcon color="secondary" />
                     </IconButton>
                 </div>
                 {item.notes && <div className="todo-item-notes">{item.notes}</div>}
