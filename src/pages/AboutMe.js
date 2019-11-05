@@ -13,7 +13,7 @@ class AboutMe extends React.Component {
                     <h2>Jia Li</h2>
                     <h4>Software Engineer</h4>
                     <span>
-                        This is my code challenge for Ascella.
+                        This is my To Do List w/ Redux!
                     </span>
                 </section>
             </div>
